@@ -65,14 +65,15 @@
  */
 ?>
 
-<div id="wrap">
+<div id="wrap2" >
 
   <header id="header" class="clearfix" role="banner">
 
     <div>
       <?php if ($logo): ?>
        <div id="logo">
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
         </div>
       <?php endif; ?>
       <hgroup id="sitename">
@@ -174,14 +175,17 @@
       <div class="footer-box"><?php print render($page['footer_first']); ?></div>
       <?php endif; ?>
       <?php if ($page['footer_second']): ?>
-      <div class="footer-box"><?php print render($page['footer_second']); ?></div>
+      <div class="footer-box" style="width: 33%;"><?php print render($page['footer_second']); ?></div>
       <?php endif; ?>
       <?php if ($page['footer_third']): ?>
       <div class="footer-box"><?php print render($page['footer_third']); ?></div>
       <?php endif; ?>
-      <?php if ($page['footer_fourth']): ?>
-      <div class="footer-box remove-margin"><?php print render($page['footer_fourth']); ?></div>
-      <?php endif; ?>
+      <?php //if ($page['footer_fourth']): 
+?>
+      <!-- div class="footer-box remove-margin" --><?php //print render($page['footer_fourth']);
+ ?><!--/div -->
+      <?php //endif;
+ ?>
      </div>
     </div>
     <div class="clear"></div>
@@ -194,7 +198,8 @@
   <div class="clear"></div>
   <div id="copyright">
     <?php if ($footer_copyright): ?>
-      <?php print $footer_copyright; ?>
+      <?php //print $footer_copyright; 
+?>
     <?php endif; ?>
     <?php if (theme_get_setting('footer_credits')): ?>
       <span class="credits"><?php print t('Designed by'); ?>  <a href="http://www.devsaran.com">Devsaran</a>.</span>
